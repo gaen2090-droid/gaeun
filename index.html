@@ -289,6 +289,13 @@ body.edit-mode [data-e]:focus{
   background:rgba(255,240,243,.8);
 }
 
+/* NAV BURGER */
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;width:32px;height:32px}
+.nav-burger span{display:block;height:2px;background:var(--black);border-radius:2px;transition:all .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   .cards-grid{grid-template-columns:repeat(2,1fr)}
@@ -297,7 +304,16 @@ body.edit-mode [data-e]:focus{
   .gallery-main{max-height:200px}
 }
 @media(max-width:600px){
-  nav{padding:0 20px}.nav-links{gap:16px}
+  nav{padding:0 20px}
+  .nav-burger{display:flex}
+  .nav-links{
+    display:none;position:absolute;top:var(--nav-h);left:0;right:0;
+    background:rgba(255,255,255,.98);border-bottom:1px solid #eee;
+    flex-direction:column;gap:0;padding:8px 0;box-shadow:0 4px 16px rgba(0,0,0,.08)
+  }
+  .nav-links.mobile-open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 24px;font-size:15px}
   .container{padding:0 20px}.hero-inner{padding:0 20px}
   .cards-grid,.cards-grid.two-col{grid-template-columns:1fr}
   .about-grid,.resume-grid,.comp-grid,.strengths-grid{grid-template-columns:1fr}
@@ -325,16 +341,19 @@ body.edit-mode [data-e]:focus{
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo" href="#hero">PORTFOLIO.</a>
-  <ul class="nav-links">
-    <li><a href="#about">소개</a></li>
-    <li><a href="#competencies">역량</a></li>
-    <li><a href="#resume">이력서</a></li>
-    <li><a href="#work">실무경험</a></li>
-    <li><a href="#academic">수상</a></li>
-    <li><a href="#campaign">캠페인리딩</a></li>
-    <li><a href="#comms">아이디어실행</a></li>
-    <li><a href="#tags-browse">태그</a></li>
-    <li><a href="#contact">연락</a></li>
+  <button class="nav-burger" id="nav-burger" onclick="toggleMobileNav()" aria-label="메뉴">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" onclick="closeMobileNav()">소개</a></li>
+    <li><a href="#competencies" onclick="closeMobileNav()">역량</a></li>
+    <li><a href="#resume" onclick="closeMobileNav()">이력서</a></li>
+    <li><a href="#work" onclick="closeMobileNav()">실무경험</a></li>
+    <li><a href="#academic" onclick="closeMobileNav()">수상</a></li>
+    <li><a href="#campaign" onclick="closeMobileNav()">캠페인리딩</a></li>
+    <li><a href="#comms" onclick="closeMobileNav()">아이디어실행</a></li>
+    <li><a href="#tags-browse" onclick="closeMobileNav()">태그</a></li>
+    <li><a href="#contact" onclick="closeMobileNav()">연락</a></li>
   </ul>
 </nav>
 
@@ -1492,6 +1511,17 @@ let editActive = false;
 
 function toggleEdit() {
   editActive ? exitEdit() : enterEdit();
+}
+
+function toggleMobileNav() {
+  const links = document.getElementById('nav-links');
+  const burger = document.getElementById('nav-burger');
+  links.classList.toggle('mobile-open');
+  burger.classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('nav-links').classList.remove('mobile-open');
+  document.getElementById('nav-burger').classList.remove('open');
 }
 
 function enterEdit() {
