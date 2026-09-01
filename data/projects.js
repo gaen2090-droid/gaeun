@@ -90,7 +90,7 @@ const PROJECTS = {
       id:'wear-lake',
       title:'호수 관광 활성화 프로젝트 제안',
       subtitle:'AI/AR 기반 기술 스탬프 투어 기획',
-      org:'WE-AR', period:'2025.02', contrib:'기여도 50%',
+      org:'WE-AR', period:'2025.02', contrib:'기여도 40%',
       thumb:'images/wear2/1.png',
       images:[{src:'images/wear2/1.png',caption:''},{src:'images/wear2/2.png',caption:''},{src:'images/wear2/3.png',caption:''}],
       summary:'지방 도시 호수 유대 관광 활성화를 위한 오프라인 체험형 콘텐츠 제안서 작성에 참여. 총 10개의 현장 스팟에서 진행하는 스탬프 투어 콘텐츠(기술 기반)를 제안',
