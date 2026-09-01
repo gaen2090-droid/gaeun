@@ -33,7 +33,7 @@ const SECTION_META = {
   work:     { label: 'Work Experience', title: '💼 실무경험' },
   academic: { label: 'Awards',          title: '🏆 수상' },
   campaign: { label: 'Campaign Leading',title: '🎯 캠페인리딩' },
-  comms:    { label: 'Idea Execution',  title: '🔬 아이디어실행' },
+  comms:    { label: 'Side Project',    title: '🔬 사이드프로젝트' },
 };
 
 function slugFor(p) {
