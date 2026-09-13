@@ -4,84 +4,322 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex"/>
-<title>갤럭시 스튜디오 캠퍼스 큐레이터 · 권가은 포트폴리오</title>
-<meta name="description" content="중앙대학교 갤럭시 Z Fold/Z Flip 스튜디오를 기획 및 운영"/>
+<title>Galaxy Campus Studio · 권가은 포트폴리오</title>
+<meta name="description" content="폴더블폰의 '각'을 대학생이 직접 체험하는 오프라인 경험으로 구체화한 Galaxy Campus Studio 기획·운영 사례입니다."/>
 <link rel="canonical" href="https://portfolio-gaeunkwon.vercel.app/p/galaxy/"/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://portfolio-gaeunkwon.vercel.app/p/galaxy/"/>
-<meta property="og:title" content="갤럭시 스튜디오 캠퍼스 큐레이터"/>
-<meta property="og:description" content="중앙대학교 갤럭시 Z Fold/Z Flip 스튜디오를 기획 및 운영"/>
-<meta property="og:image" content="https://portfolio-gaeunkwon.vercel.app/images/galaxy/1.jpg"/>
+<meta property="og:title" content="Galaxy Campus Studio"/>
+<meta property="og:description" content="폴더블폰의 '각'을 대학생이 직접 체험하는 오프라인 경험으로 구체화한 Galaxy Campus Studio 기획·운영 사례입니다."/>
+<meta property="og:image" content="https://portfolio-gaeunkwon.vercel.app/images/galaxy/4.jpg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../../styles.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#FF3A5C;--pink-light:#fff0f3;--black:#111;--white:#fff;--bg:#fafaf8;--gray:#6b6b6b;--line:#eee;--nav-h:64px}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--black);background:var(--white);line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
+
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:1000}
+.nav-logo{font-weight:900;font-size:15px;letter-spacing:.08em;color:var(--black);text-decoration:none}
+.back-link{font-size:14px;font-weight:700;color:#444;text-decoration:none;transition:color .2s}
+.back-link:hover{color:var(--pink)}
+
+.wrap{max-width:960px;margin:0 auto;padding:0 32px}
+.sec{padding:80px 0}
+.sec:first-of-type{padding-top:calc(var(--nav-h) + 48px)}
+.sec-sm{padding:48px 0}
+
+/* HERO */
+.hero{background:var(--black);color:#fff;padding-top:calc(var(--nav-h) + 64px);padding-bottom:0}
+.hero-label{font-size:12px;font-weight:700;letter-spacing:.16em;color:rgba(255,255,255,.6);margin-bottom:16px}
+.hero-title{font-size:clamp(28px,5vw,44px);font-weight:900;letter-spacing:-.01em;margin-bottom:20px}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.78);line-height:1.85;margin-bottom:32px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 12px;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;padding-bottom:40px}
+.hero-role{font-size:12px;font-weight:700;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;color:rgba(255,255,255,.9)}
+.hero-shot{width:100%;display:block}
+.hero-shot img{width:100%;display:block;max-height:420px;object-fit:cover;object-position:center 45%}
+
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--pink);text-transform:uppercase;margin-bottom:14px}
+.h2{font-size:clamp(22px,3.2vw,30px);font-weight:900;line-height:1.4;margin-bottom:20px;letter-spacing:-.01em}
+.h3{font-size:17px;font-weight:900;margin-bottom:10px}
+.body{font-size:15px;color:#444;line-height:1.9}
+.body + .body{margin-top:14px}
+.body-sm{font-size:13.5px;color:var(--gray);line-height:1.8}
+
+.divider{height:1px;background:var(--line)}
+.bg-alt{background:var(--bg)}
+
+/* FLOW */
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:28px 0;font-size:13px;font-weight:700}
+.flow span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:9px 16px;white-space:nowrap}
+.flow em{color:var(--pink);font-style:normal}
+.flow .arrow{color:#ccc;font-weight:400}
+
+/* THREE AXES */
+.axes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.axis-card{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.axis-shot{width:100%;aspect-ratio:4/3;overflow:hidden;background:var(--bg)}
+.axis-shot img{width:100%;height:100%;object-fit:cover;display:block}
+.axis-body{padding:18px}
+.axis-tag{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--pink);text-transform:uppercase;margin-bottom:6px}
+.axis-title{font-size:15px;font-weight:900;margin-bottom:8px}
+.axis-desc{font-size:12.5px;color:var(--gray);line-height:1.7}
+.axis-card.is-main{border-color:var(--pink);box-shadow:0 0 0 1px var(--pink)}
+
+/* SHOT */
+.result-shot{margin:28px 0;text-align:center}
+.result-shot img{max-width:320px;width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14)}
+.result-shot figcaption{font-size:12.5px;color:var(--gray);margin-top:10px}
+.shot-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:28px 0}
+.shot-row .result-shot{margin:0}
+
+/* PRODUCT CONNECTION HERO SHOT */
+.hero-shot-block{margin:36px 0;text-align:center}
+.hero-shot-block img{max-width:420px;width:100%;border-radius:20px;box-shadow:0 20px 56px rgba(0,0,0,.16);display:inline-block}
+.hero-shot-caption{font-size:13px;color:var(--gray);margin-top:14px;text-align:center}
+.hero-shot-pair{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:start;margin:36px 0}
+.hero-shot-pair img{width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14);display:block}
+.hero-shot-pair figcaption{font-size:12.5px;color:var(--gray);margin-top:10px;text-align:center}
+
+/* MISSION LIST */
+.mission-list{display:flex;flex-direction:column;gap:14px;margin:28px 0}
+.mission{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.mission-loc{flex:0 0 auto;font-size:12px;font-weight:900;color:#fff;background:var(--pink);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.mission-desc{font-size:13.5px;color:#333;line-height:1.7}
+.mission-desc b{color:var(--black)}
+
+/* ROUTE */
+.route{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin:32px 0}
+.route-stop{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:center;flex:1;min-width:130px}
+.route-stop b{display:block;font-size:14px;font-weight:900;margin-bottom:6px}
+.route-stop span{font-size:12px;color:var(--pink);font-weight:700}
+.route-arrow{color:#ccc;font-size:20px;font-weight:400;padding:0 10px}
+
+/* RESULT */
+.stat-hero{text-align:center;margin:8px 0 44px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0}
+.stat-card{text-align:center;border:1px solid var(--line);border-radius:16px;padding:32px 16px}
+.stat-num{font-size:clamp(30px,5vw,44px);font-weight:900;color:var(--pink);line-height:1}
+.stat-label{font-size:13px;color:var(--gray);margin-top:10px}
+.quote-box{margin-top:36px;border-left:3px solid var(--pink);padding:18px 24px;background:var(--pink-light);border-radius:0 12px 12px 0}
+.quote-box p{font-size:14.5px;color:#333;line-height:1.8;font-style:normal}
+
+footer{background:#080808;padding:28px 48px;text-align:center}
+.footer-copy{font-size:12px;color:#3a3a3a;letter-spacing:.06em}
+
+@media(max-width:640px){
+  nav{padding:0 20px}
+  .wrap{padding:0 20px}
+  .sec{padding:56px 0}
+  .hero{padding-top:calc(var(--nav-h) + 40px)}
+  .axes{grid-template-columns:1fr}
+  .hero-shot-pair{flex-direction:column;align-items:center}
+  .hero-shot-pair img{height:auto!important;width:80%!important;max-width:280px}
+  .stat-grid{grid-template-columns:1fr}
+  .route{flex-direction:column}
+  .route-arrow{transform:rotate(90deg);padding:6px 0}
+  .mission{flex-direction:column}
+}
+</style>
 </head>
 <body>
 <nav>
   <a class="nav-logo" href="../../index.html">권가은</a>
-  <a class="back-link" href="../../index.html#campaign">← 포트폴리오로 돌아가기</a>
+  <a class="back-link" href="../../index.html#projects">← 포트폴리오로 돌아가기</a>
 </nav>
-<main class="page">
-  <div class="detail-tags">
-    <span class="tag tag-org">마케팅학회 GML</span>
-    <span class="tag tag-period">2022.08 – 2022.10</span>
-    <span class="tag tag-contrib">기여도 50%</span>
-  </div>
-  <h1 class="detail-title">갤럭시 스튜디오 캠퍼스 큐레이터</h1>
-  <p class="detail-sub">1,200명의 방문객을 불러온 폴더블폰 팝업스토어</p>
 
-  <div class="gallery">
-    <figure>
-      <img src="../../images/galaxy/1.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <p class="hero-label">GALAXY CAMPUS STUDIO</p>
+    <h1 class="hero-title">폴더블폰의 '각'을,<br>대학생이 직접 체험하는 경험으로 만들었습니다.</h1>
+    <p class="hero-desc">팀장으로서 10인 팀을 이끌며, 중앙대학교 후문에서 2주간 운영한 Galaxy Z Fold4·Z Flip4 캠퍼스 스튜디오를 기획하고<br>그 중 이벤트데이의 캠퍼스 스탬프 투어를 중심 콘텐츠로 운영했습니다.</p>
+    <div class="hero-meta">
+      <span class="hero-role">프로젝트 팀장</span>
+      <span class="hero-role">마케팅학회 GML</span>
+      <span class="hero-role">2022.08 – 2022.10</span>
+    </div>
+  </div>
+  <div class="hero-shot"><img src="../../images/galaxy/storefront-night.jpg" alt="야간 Galaxy Campus Studio 매장 전경"/></div>
+</header>
+
+<!-- BACKGROUND -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Background</p>
+    <h2 class="h2">Galaxy Studio와 협업해, 폴더블폰을 캠퍼스에 들여왔습니다.</h2>
+    <p class="body">중앙대학교 마케팅학회 GML이 Galaxy Studio와 함께 진행한 캠퍼스 스튜디오로, 중앙대 후문에서 약 2주간 운영했습니다.<br>기능 체험, 폰꾸 체험, 숏폼 촬영 등 상시 체험 콘텐츠와 함께, 마지막 날인 이벤트데이에는 캠퍼스 곳곳을 도는 스탬프 투어를 진행했습니다.</p>
+    <div class="hero-shot-pair" style="display:flex;align-items:flex-start;justify-content:center;gap:20px;flex-wrap:wrap">
+      <figure style="margin:0;display:inline-flex;flex-direction:column;align-items:center">
+        <img src="../../images/galaxy/8.jpg" alt="GML x Galaxy Studio 공식 포스터" style="height:280px;width:auto;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14);display:block"/>
+        <figcaption>운영 기간과 프로그램을 안내한 공식 포스터</figcaption>
+      </figure>
+      <figure style="margin:0;display:inline-flex;flex-direction:column;align-items:center">
+        <img src="../../images/galaxy/1.jpg" alt="Galaxy Campus Studio 앞에 모인 10인 팀" style="height:280px;width:auto;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14);display:block"/>
+        <figcaption>Galaxy Campus Studio 앞에 모인 10인 팀</figcaption>
+      </figure>
+    </div>
+    <p class="body">기획안 제안 단계는 저를 포함한 단 2명이 진행해 직접 수주해왔고, 공모에 선정된 이후 10인 팀이 꾸려져 제작과 운영을 맡았습니다.</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE DIRECTION -->
+<section class="sec bg-alt">
+  <div class="wrap">
+    <p class="eyebrow">Experience Direction</p>
+    <h2 class="h2">전시, 체험 프로그램, 이벤트데이를 하나의 흐름으로 설계했습니다.</h2>
+    <p class="body">방문객이 스튜디오에 들어와 전시를 보고, 체험 프로그램으로 폴더블폰 기능을 만져보고,<br>이벤트데이에는 캠퍼스 전체를 돌며 '각'을 몸으로 표현하도록 세 단계를 연결했습니다.</p>
+    <div class="axes">
+      <div class="axis-card">
+        <div class="axis-shot"><img src="../../images/galaxy/2.jpg" alt="발견, 우리 캠퍼스만의 각 전시 공간"/></div>
+        <div class="axis-body">
+          <p class="axis-tag">Exhibition</p>
+          <p class="axis-title">발견, 우리 캠퍼스만의 각</p>
+          <p class="axis-desc">캠퍼스 큐레이터들이 담은 캠퍼스 사진과 폴더블폰으로 찍어 꾸민 콘텐츠를 함께 전시했습니다.</p>
+        </div>
+      </div>
+      <div class="axis-card">
+        <div class="axis-shot"><img src="../../images/galaxy/11.jpg" alt="푸앙이 퍼즐 프로그램 기획 슬라이드"/></div>
+        <div class="axis-body">
+          <p class="axis-tag">Experience</p>
+          <p class="axis-title">포토 플렉스 · 푸앙이 퍼즐</p>
+          <p class="axis-desc">플렉스 모드 촬영, 멀티태스킹 기능을 활용한 미션형 콘텐츠로 제품 기능을 체험하게 했습니다.</p>
+        </div>
+      </div>
+      <div class="axis-card is-main">
+        <div class="axis-shot"><img src="../../images/galaxy/12.jpg" alt="이벤트데이 스탬프 투어 기획안"/></div>
+        <div class="axis-body">
+          <p class="axis-tag">Event Day</p>
+          <p class="axis-title">캠퍼스 스탬프 투어</p>
+          <p class="axis-desc">캠퍼스 곳곳의 미션 거점을 도는 이벤트데이로, 이 프로젝트의 핵심 콘텐츠입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- MAIN CASE: STAMP TOUR -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Main Case · Campus Stamp Tour</p>
+    <h2 class="h2">캠퍼스 곳곳을 돌며 몸으로 '각'을 표현하는 스탬프 투어</h2>
+
+    <p class="body"><b>Target & Context.</b> 이벤트데이에는 참여자가 캠퍼스 곳곳을 직접 이동하며 폴더블폰의 '각'을 몸으로 표현하도록 동선을 넓혔습니다.</p>
+
+    <p class="body" style="margin-top:28px"><b>Experience Idea.</b> 투명 필름에 인쇄된 미션지를 들고 배경과 겹쳐가며 정해진 각도를 몸으로 만들어 사진을 찍는 방식으로 설계했습니다.<br>미션 설명(10분) → 미션 수행(총 40분) → 상품 추첨(5분) 순으로 진행했고, 4개 거점에서 각각 다른 방식으로 '각'을 표현하도록 구성했습니다.</p>
+
+    <div class="flow">
+      <span>미션 설명</span><span class="arrow">→</span>
+      <span><em>미션 수행 (4거점)</em></span><span class="arrow">→</span>
+      <span>상품 추첨</span>
+    </div>
+
+    <figure style="max-width:560px;margin:32px auto;text-align:center">
+      <img src="../../images/galaxy/stamp-map.jpg" alt="Galaxy Studio Event Day 캠퍼스 스탬프 투어 동선 지도" style="width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14);display:block"/>
+      <figcaption style="font-size:12.5px;color:var(--gray);margin-top:10px">이벤트데이 캠퍼스 스탬프 투어 동선</figcaption>
     </figure>
-    <figure>
-      <img src="../../images/galaxy/2.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/3.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/4.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/5.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/6.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/7.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/8.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/9.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/10.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/11.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
-    </figure>
-    <figure>
-      <img src="../../images/galaxy/12.jpg" alt="갤럭시 스튜디오 캠퍼스 큐레이터" loading="lazy"/>
+
+    <p class="body-sm" style="margin:24px 0 8px">대표 미션 2가지</p>
+    <div class="mission-list">
+      <div class="mission">
+        <span class="mission-loc">정문</span>
+        <p class="mission-desc">큐레이터를 찾아 함께 <b>90도</b>를 몸동작으로 표현한 모습을 찍어오는 미션</p>
+      </div>
+      <div class="mission">
+        <span class="mission-loc">빼빼로 광장</span>
+        <p class="mission-desc">빼빼로처럼 <b>180도</b>로 뻗은 인물 사진을 찍어오는 미션</p>
+      </div>
+    </div>
+
+    <div class="shot-row">
+      <figure class="result-shot">
+        <img src="../../images/galaxy/6.jpg" alt="미션 수행 중인 참여자 모습"/>
+        <figcaption>투명 필름을 겹쳐 촬영하는 미션 수행 장면</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT CONNECTION -->
+<section class="sec bg-alt">
+  <div class="wrap">
+    <p class="eyebrow">Product Connection</p>
+    <h2 class="h2">투명 필름 미션지로, '각'을 실제로 만들어보게 했습니다.</h2>
+    <p class="body">폴더블폰이 만드는 화면의 '각'을, 배경 위에 겹치는 투명 필름 미션지로 참여자가 직접 각도를 만들어보도록 했습니다.</p>
+    <div class="hero-shot-block">
+      <img src="../../images/galaxy/4.jpg" alt="빼빼로처럼 180도로 뻗어있는 우리 미션지"/>
+      <p class="hero-shot-caption">배경 위에 겹쳐 촬영하는 투명 필름 미션지 — "빼빼로처럼 '180도'로 뻗어있는 우리"</p>
+    </div>
+    <div class="result-shot">
+      <img src="../../images/galaxy/5.jpg" alt="투명 필름 미션지를 실제로 겹쳐 촬영하는 모습"/>
+      <figcaption>투명 필름을 배경에 겹쳐 실제로 촬영한 미션 수행 사진</figcaption>
+    </div>
+    <figure style="max-width:420px;margin:32px auto;text-align:center">
+      <img src="../../images/galaxy/mission-cards.jpg" alt="4개 거점 투명 필름 미션지 실물 — 180도, 30도, 180도, 120도" style="width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14);display:block"/>
+      <figcaption style="font-size:12.5px;color:var(--gray);margin-top:10px">거점별로 제작한 투명 필름 미션지 실물</figcaption>
     </figure>
   </div>
-  <section class="detail-block">
-    <div class="detail-block-label">업무 요약</div>
-    <div class="detail-block-body">중앙대학교 갤럭시 Z Fold/Z Flip 스튜디오를 기획 및 운영</div>
-  </section>
-  <section class="detail-block">
-    <div class="detail-block-label">업무 내용 · 전략</div>
-    <div class="detail-block-body"><p><strong>[WHY]</strong></p><p>폴더블폰이 전달하고자 하는 핵심 메시지인 '각'을 캠퍼스 일상 속에서 자연스럽고 반복적으로 접하게 만들어야 했음</p><br><p><strong>[HOW]</strong></p><p>[스튜디오 사진/영상 전시] '발견, 우리 캠퍼스만의 각'을 테마로, 캠퍼스 큐레이터들이 자신만의 시각으로 담은 캠퍼스 사진과 폴더블폰 카메라로 찍어 일러스트 필터로 꾸민 콘텐츠를 함께 전시해 폴더블폰과 캠퍼스의 접점을 제시</p><br><p>[스튜디오 체험 프로그램] 특정 상황별 포즈를 제한 시간 안에 플렉스모드로 함께 촬영하는 '포토플렉스', 멀티태스킹 기능으로 이미지를 함께 보며 조합하는 미션형 이미지 편집 콘텐츠 '푸앙이 퍼즐' 등 폴더블폰 기능을 자연스럽게 체험하도록 구성</p><br><p>[이벤트데이 프로그램] 캠퍼스 곳곳에 미션 거점을 마련해 스탬프 투어를 진행. 투명필름지를 들고 그 가이드라인에 맞춰 몸으로 폰의 '각'(펼침·접힘)을 표현하는 포즈 미션, 병뚜껑을 날려 원하는 각도를 만드는 게임형 미션, 가위바위보에서 진 사람이 다리를 찢어 각도를 만드는 미션 등을 배치</p></div>
-  </section>
-  <section class="detail-block detail-result">
-    <div class="detail-block-label">성과 · 결과</div>
-    <div class="detail-block-body"><p>2주간 1,000~1,200명의 방문객</p><p>이벤트데이 당일 경품 200개 조기소진</p><p>실무자: &quot;지금까지 해온 학교들 중 가장 완벽하고 체계적이다.&quot;</p></div>
-  </section>
-</main>
+</section>
+
+<!-- PARTICIPATION DESIGN -->
+<section class="sec-sm">
+  <div class="wrap">
+    <p class="eyebrow">Participation Design</p>
+    <h3 class="h3">미션 접수부터 경품 추첨까지, 한 자리에서 끝나도록 설계</h3>
+    <p class="body-sm">미션 사진을 접수하고 바로 경품을 추첨받을 수 있도록 이벤트 존을 별도로 마련해, 참여자가 미션 완료 후 곧바로 보상을 받도록 했습니다.</p>
+    <div class="result-shot" style="max-width:460px;margin-left:auto;margin-right:auto">
+      <img src="../../images/galaxy/3.jpg" alt="미션 접수 및 경품 추첨 이벤트 존" style="max-width:100%"/>
+      <figcaption>미션 접수와 경품 추첨을 함께 진행한 이벤트 존</figcaption>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- PROJECT LEADERSHIP -->
+<section class="sec bg-alt">
+  <div class="wrap">
+    <p class="eyebrow">Project Leadership</p>
+    <h2 class="h2">팀장으로서 10인 팀의 논의 구조를 설계하고,<br>에이전시 실무자와 소통했습니다.</h2>
+
+    <p class="body"><b>팀 운영.</b> 기획안 제안은 저를 포함한 2명이 진행해 직접 수주해왔고, 선정 이후 꾸려진 10인 팀의 팀장을 맡아 제작과 운영을 총괄했습니다. 아이디어 회의에서 의견이 갈리는 상황을 논의 구조의 문제로 보고, 팀을 3개 소그룹으로 나눠 각자 안을 구체화한 뒤 실현 가능성·비용·전달력·차별성 4가지 기준으로 병합하는 방식을 사용했습니다.</p>
+
+    <div class="flow" style="margin-top:20px">
+      <span>스탬프 투어 큰 틀 제안</span><span class="arrow">→</span>
+      <span>몸으로 각 표현하기 (팀원 제안)</span><span class="arrow">→</span>
+      <span>투명 필름 겹치기 (팀원 제안)</span><span class="arrow">→</span>
+      <span><em>최종 미션 완성</em></span>
+    </div>
+
+    <p class="body" style="margin-top:28px"><b>외부 소통.</b> 에이전시 실무자와 운영 일정, 전시 콘텐츠, 경품 구성을 조율하는 창구 역할을 맡아, 학회와 에이전시 사이의 의사결정을 정리해 전달했습니다.</p>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Result</p>
+    <h2 class="h2 stat-hero">2주간의 운영 결과입니다.</h2>
+    <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);max-width:600px;margin-left:auto;margin-right:auto">
+      <div class="stat-card">
+        <div class="stat-num">1,000~1,200명</div>
+        <div class="stat-label">2주간 방문</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">약 6시간</div>
+        <div class="stat-label">이벤트데이 경품 200개 소진</div>
+      </div>
+    </div>
+    <div class="quote-box">
+      <p>"타 학교 포함, Campus Studio 사례 중 가장 완벽하고 체계적이었다" — 에이전시 실무자 피드백</p>
+    </div>
+  </div>
+</section>
+
 <footer><p class="footer-copy">© 권가은</p></footer>
-<script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+
 </body>
 </html>

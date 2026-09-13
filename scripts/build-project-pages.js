@@ -30,10 +30,10 @@ const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://portfolio-gaeunkwon.verc
 
 const SITE_TITLE = '권가은 포트폴리오';
 const SECTION_META = {
-  work:     { label: 'Work Experience', title: '💼 실무경험' },
-  academic: { label: 'Awards',          title: '🏆 수상' },
-  campaign: { label: 'Campaign Leading',title: '🎯 캠페인리딩' },
-  comms:    { label: 'Side Project',    title: '🔬 사이드프로젝트' },
+  work:       { label: 'Work Experience', title: '💼 실무경험' },
+  projects:   { label: 'Projects',        title: '🚀 프로젝트' },
+  awards:     { label: 'Awards',          title: '🏆 수상' },
+  activities: { label: 'Activities',      title: '🎯 활동' },
 };
 
 function slugFor(p) {
@@ -173,8 +173,12 @@ function build() {
       }
       seen.add(slug);
 
-      const outPath = path.join(ROOT, 'p', slug, 'index.html');
-      writeFile(outPath, buildDetailPage(listKey, p));
+      // Projects with a hand-authored case-study page (customPage:true) keep
+      // their own p/<slug>/index.html — never overwrite it with the generic template.
+      if (!p.customPage) {
+        const outPath = path.join(ROOT, 'p', slug, 'index.html');
+        writeFile(outPath, buildDetailPage(listKey, p));
+      }
       urls.push(`/p/${slug}/`);
       cardHtmlByList[listKey].push(buildCardHtml(listKey, p));
     }
