@@ -40,26 +40,26 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .h2{font-size:clamp(19px,2.6vw,24px);font-weight:900;line-height:1.4;margin-bottom:16px;letter-spacing:-.01em}
 .body{font-size:14.5px;color:#444;line-height:1.85}
 
-.principle-line{font-size:16px;font-weight:700;text-align:center;margin:24px 0;color:var(--black)}
-.chip-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+.principle-line{font-size:16px;font-weight:700;margin:24px 0;color:var(--black)}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .chip{font-size:13px;font-weight:700;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:9px 16px;color:#333}
 
-.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:24px 0;font-size:12px;font-weight:700;justify-content:center}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:24px 0;font-size:12px;font-weight:700}
 .flow span{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:8px 12px;white-space:nowrap}
 .flow .arrow{color:#ccc;font-weight:400}
 
 .divider{height:1px;background:var(--line)}
 
-.case-shot{margin:24px 0;text-align:center}
+.case-shot{margin:24px 0}
 .case-shot img{max-width:640px;width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14)}
 
-.perf-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.perf-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 .perf-tag{font-size:13px;font-weight:700;background:var(--pink-light);color:var(--pink);border-radius:999px;padding:8px 16px}
 
 /* ARCHIVE */
-.archive-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.archive-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
 .archive-chip{font-size:13px;font-weight:700;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:9px 16px;color:#555}
-.todo-inline{font-size:12px;color:#b58900;background:#fff8e6;border:1px dashed #e6cf8a;border-radius:8px;padding:10px 14px;margin-top:20px;text-align:center}
+.todo-inline{font-size:12px;color:#b58900;background:#fff8e6;border:1px dashed #e6cf8a;border-radius:8px;padding:10px 14px;margin-top:20px}
 
 footer{background:#080808;padding:28px 48px;text-align:center}
 .footer-copy{font-size:12px;color:#3a3a3a;letter-spacing:.06em}
@@ -97,7 +97,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec" id="principle">
   <div class="wrap">
     <p class="eyebrow">Content Principle</p>
-    <h2 class="h2" style="text-align:center">아이디어스 고객의 취향과 구매 이유에 맞는지를 먼저 확인했습니다.</h2>
+    <h2 class="h2">아이디어스 고객의 취향과 구매 이유에 맞는지를 먼저 확인했습니다.</h2>
     <p class="principle-line">"이 트렌드가 아이디어스 고객의 취향과 구매 이유에 실제로 맞는가?"</p>
     <div class="chip-row">
       <span class="chip">핸드메이드 상품에 익숙함</span>
@@ -114,7 +114,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec" id="flow">
   <div class="wrap">
     <p class="eyebrow">Content Flow</p>
-    <h2 class="h2" style="text-align:center">트렌드를 발견하면 고객과 상품을 함께 연결했습니다.</h2>
+    <h2 class="h2">트렌드를 발견하면 고객과 상품을 함께 연결했습니다.</h2>
     <div class="flow">
       <span>외부 트렌드 발견</span><span class="arrow">→</span>
       <span>고객 적합성 판단</span><span class="arrow">→</span>
@@ -136,7 +136,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
     <p class="body">당시 유명인의 착용을 계기로 댕기가 다시 주목받고 있었습니다.<br>댕기가 전통적인 소재, 공예적 감성, 현대적인 패션 요소를 함께 가지고 있어 아이디어스 고객과 잘 맞는다고 판단했습니다.<br>플랫폼 안에서 댕기와 전통 요소를 현대적으로 재해석한 스크런치·액세서리 등을 직접 찾아 콘텐츠로 큐레이션했습니다.</p>
 
     <div class="case-shot">
-      <img src="../../images/idus2_post/2.png" alt="댕기 트렌드를 소개한 인앱 매거진"/>
+      <img src="../../images/idus2_post/2.png" alt="댕기 트렌드를 소개한 인앱 매거진" style="aspect-ratio:1343/822;object-fit:cover"/>
     </div>
 
     <div class="perf-row">
@@ -156,7 +156,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
     <p class="body">B급 상품을 좋은 핸드메이드 상품을 합리적인 가격에 발견할 수 있는 기회라는 메시지로 구성했습니다.<br>왜 B급인지, 실제 사용에는 문제가 없는지, 가격적으로 어떤 이점이 있는지, 어떤 재미있는 상품이 있는지를 중심으로 콘텐츠를 구성했습니다.</p>
 
     <div class="case-shot">
-      <img src="../../images/idus2_post/1.png" alt="B급 할인관을 소개한 네이버 포스트"/>
+      <img src="../../images/idus2_post/1.png" alt="B급 할인관을 소개한 네이버 포스트" style="aspect-ratio:929/629;object-fit:cover"/>
     </div>
 
     <div class="perf-row">
@@ -172,9 +172,9 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec" id="archive">
   <div class="wrap">
     <p class="eyebrow">Content Archive</p>
-    <h2 class="h2" style="text-align:center">다양한 주제를 타깃에 맞춰 큐레이션했습니다.</h2>
+    <h2 class="h2">다양한 주제를 타깃에 맞춰 큐레이션했습니다.</h2>
     <div class="case-shot">
-      <img src="../../images/idus2_post/3.jpg" alt="자개보석함, 동물 키링, 오마모리 키링 등 발행 콘텐츠의 네이버 검색어 상위 노출 화면"/>
+      <img src="../../images/idus2_post/3.jpg" alt="자개보석함, 동물 키링, 오마모리 키링 등 발행 콘텐츠의 네이버 검색어 상위 노출 화면" style="aspect-ratio:1170/1409;object-fit:cover"/>
     </div>
     <div class="perf-row">
       <span class="perf-tag">'자개보석함' 검색어 상위 노출</span>

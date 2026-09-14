@@ -60,17 +60,23 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .trend-plus{font-size:28px;font-weight:900;color:var(--pink)}
 .trend-card b{display:block;font-size:16px;font-weight:900;margin-bottom:6px}
 .trend-card span{font-size:13px;color:var(--gray);line-height:1.6}
-.insight-line{font-size:16px;font-weight:700;text-align:center;margin:32px 0;line-height:1.7}
+.insight-line{font-size:16px;font-weight:700;margin:32px 0;line-height:1.7}
 .insight-line em{color:var(--pink);font-style:normal}
-.quote-line{background:var(--pink-light);border-radius:12px;padding:24px 28px;font-size:17px;font-weight:700;color:var(--black);text-align:center;margin:32px 0;line-height:1.6}
+.quote-line{display:inline-block;background:var(--pink-light);border-radius:12px;padding:24px 28px;font-size:17px;font-weight:700;color:var(--black);margin:12px auto 0;line-height:1.6;text-align:center}
+.quote-wrap{text-align:center;margin-top:28px}
+.trend-down-arrow{color:#ccc;font-size:20px;font-weight:700}
 
-.result-shot{margin:40px 0;text-align:center}
-.result-shot img{max-width:340px;width:100%;border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.16)}
+/* SHOT (phone screenshots share one native ratio — 1179x2556) */
+.result-shot{margin:40px 0}
+.result-shot img{max-width:240px;width:100%;aspect-ratio:1179/2556;object-fit:cover;border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.16)}
+
+.quote-shot{margin:20px auto 0;max-width:240px}
+.quote-shot img{width:100%;aspect-ratio:1179/1308;object-fit:cover;border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.16);display:block}
 
 /* CONCEPT ANNOTATION */
 .concept-grid{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-top:32px}
-.concept-img{flex:0 0 260px}
-.concept-img img{width:100%;border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.14)}
+.concept-img{flex:0 0 200px}
+.concept-img img{width:100%;aspect-ratio:1179/2556;object-fit:cover;border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.14)}
 .concept-tags{flex:1;min-width:220px;display:flex;flex-direction:column;gap:12px}
 .concept-tag{font-size:13px;color:#333;border-left:2px solid var(--pink);padding-left:12px}
 
@@ -80,7 +86,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .check-item::before{content:'✓';color:var(--pink);font-weight:900;flex:0 0 auto}
 
 /* RESULT STAT */
-.stat-hero{text-align:center;margin:36px 0}
+.stat-hero{margin:36px 0}
 .stat-num{font-size:clamp(48px,9vw,80px);font-weight:900;color:var(--pink);line-height:1}
 .stat-label{font-size:14px;color:var(--gray);margin-top:10px}
 .todo{font-size:12px;color:#b58900;background:#fff8e6;border:1px dashed #e6cf8a;border-radius:8px;padding:10px 14px;margin:16px auto 0;max-width:420px;text-align:left}
@@ -132,14 +138,14 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <!-- 1. BACKGROUND -->
 <section class="sec" id="background">
   <div class="wrap">
-    <p class="eyebrow">Background</p>
-    <h2 class="h2">운영 과정에서 다음 콘텐츠의 힌트를 찾았습니다.</h2>
-    <p class="body">AI 콘텐츠를 운영하며 트렌드의 변화 속도가 매우 빠르다는 점을 체감했습니다.<br>이미 크게 확산된 소재를 확인한 뒤 제작하면 출시 시점에는 관심이 빠르게 이동할 수 있었고,<br>운영 과정에서 접하는 초기 반응과 외부 트렌드를 신규 기획에도 활용할 필요가 있다고 판단했습니다.</p>
-    <p class="body">이에 기획팀 내부에서도 직접 신규 아이템을 발굴해보자는 의견을 제안했고, 이후 직접 AI Style 기획과 출시까지 맡았습니다.</p>
+    <p class="eyebrow">Background <span style="font-size:11px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--gray);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-left:8px">기여도 100%</span></p>
+    <h2 class="h2">트렌드를 따라가는 방식의 시간차를 발견하고, 선제 기획을 제안했습니다.</h2>
+    <p class="body">기존엔 외부 트렌드가 충분히 확산된 뒤 이를 AI 콘텐츠로 구현하는 방식이었습니다.<br>검증된 수요를 활용할 수 있었지만, 트렌드 주기가 짧아 출시 시점엔 관심이 이미 지나가거나 비슷한 콘텐츠가 쏟아지는 경우가 많았습니다.<br>매일 사용자 반응과 시장 변화를 가장 먼저 접하는 운영자가 오히려 작은 변화를 가장 빠르게 발견할 수 있다고 판단해,<br>기획팀이 직접 다음 아이템을 발굴하는 방식을 병행하자고 제안했습니다.</p>
+    <p class="body">다만 기획자가 직접 제작에 뛰어들기엔 기준이 부족해,<br>사수와 함께 <em>‘느낌 구현 가능 여부·제작 공수·반응 포인트·트렌드 부합도’</em> 네 가지 체크포인트를 정립하고,<br>이 기준으로 기획안을 작성해 매주 브리핑했습니다.</p>
     <div class="flow">
-      <span>운영</span><span class="arrow">→</span>
-      <span>트렌드·사용자 신호 발견</span><span class="arrow">→</span>
-      <span>아이디어 발굴</span><span class="arrow">→</span>
+      <span>운영 중 신호 발견</span><span class="arrow">→</span>
+      <span>선제 기획 제안</span><span class="arrow">→</span>
+      <span>4가지 기준 검토</span><span class="arrow">→</span>
       <span>직접 제작</span><span class="arrow">→</span>
       <span><em>출시</em></span>
     </div>
@@ -155,6 +161,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
     <h2 class="h2">서로 다른 두 트렌드를 하나의 사용자 시나리오로 연결했습니다.</h2>
     <p class="case-name">대표 프로젝트</p>
     <p class="case-title">두쫀쿠 플러팅</p>
+    <p class="body">팬덤에서 이미 확인된 ‘좋아하는 인물을 나와 가까운 관계로 상상하고 싶은 욕구’와 연결하면<br>더 매력적인 사용 시나리오를 만들 수 있다고 봤습니다.</p>
 
     <div class="trend-pair">
       <div class="trend-card">
@@ -168,12 +175,12 @@ footer{background:#080808;padding:28px 48px;text-align:center}
       </div>
     </div>
 
-    <p class="insight-line">두 현상에서 <em>좋아하는 대상과 특정 상황을 함께 상상하고 싶은 사용자 행동</em>을 발견했습니다.</p>
-
-    <div class="quote-line">"좋아하는 사람이 집 앞에 찾아와<br>두쫀쿠를 건네준다면?"</div>
-
-    <div class="result-shot">
-      <img src="../../images/snow2_planning/1.jpg" alt="두쫀쿠 플러팅 AI Style 결과 이미지"/>
+    <div class="quote-wrap">
+      <div class="trend-down-arrow">↓</div>
+      <div class="quote-line">"데이트 나온 애인이 두쫀쿠를 무심한 듯 건네준다면?"</div>
+      <div class="quote-shot">
+        <img src="../../images/snow2_planning/1-cropped.jpg" alt="두쫀쿠 플러팅 AI Style 결과 이미지"/>
+      </div>
     </div>
   </div>
 </section>
@@ -185,18 +192,18 @@ footer{background:#080808;padding:28px 48px;text-align:center}
   <div class="wrap">
     <p class="eyebrow">Concept Development</p>
     <h2 class="h2">아이디어를 한 장면으로 구체화했습니다.</h2>
-    <p class="body">두쫀쿠라는 소재만 넣은 이미지가 아니라, 결과물을 보는 순간 상황이 이해되도록 장면을 구체적으로 설계했습니다.</p>
+    <p class="body">AI 이미지 콘텐츠는 무엇을 입힐지보다, 사용자가 직접 생성해보고 싶을 만큼 구체적인 상황을 만드는 것이 중요하다고 판단했습니다.<br>두쫀쿠라는 소재만 넣은 이미지가 아니라, 결과물을 보는 순간 관계와 상황이 이해되도록 장면을 구체적으로 설계했습니다.</p>
 
     <div class="concept-grid">
       <div class="concept-img">
         <img src="../../images/snow2_planning/1.jpg" alt="두쫀쿠 플러팅 장면 설계"/>
       </div>
       <div class="concept-tags">
-        <div class="concept-tag">겨울 분위기의 집 앞</div>
-        <div class="concept-tag">목도리와 의상</div>
-        <div class="concept-tag">두쫀쿠 패키지</div>
-        <div class="concept-tag">인물의 표정과 시선</div>
-        <div class="concept-tag">사용자와의 거리감</div>
+        <div class="concept-tag">겨울 분위기의 거리</div>
+        <div class="concept-tag">'남친룩' 스타일의 편안한 의상</div>
+        <div class="concept-tag">방금 막 포장한 듯한 두쫀쿠</div>
+        <div class="concept-tag">자연스러운 표정과 시선</div>
+        <div class="concept-tag">가까운 거리감</div>
         <div class="concept-tag">팬덤 이미지로 활용했을 때 자연스러운 구도</div>
       </div>
     </div>
@@ -236,11 +243,12 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec" id="result">
   <div class="wrap">
     <p class="eyebrow">Result</p>
-    <h2 class="h2" style="text-align:center">대표 성과</h2>
+    <h2 class="h2">대표 성과</h2>
     <div class="stat-hero">
       <div class="stat-num">3.3만</div>
       <div class="stat-label">두쫀쿠 플러팅 생성 횟수</div>
     </div>
+    <p class="body" style="margin-top:24px">이후 팀 내에서도 트렌드가 완전히 확산된 뒤 따라가기보다, 초기 신호를 포착해<br>먼저 기획·출시하는 방식을 이어가면 좋겠다는 반응을 받았습니다.</p>
   </div>
 </section>
 

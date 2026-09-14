@@ -50,22 +50,22 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .bg-dark .body{color:rgba(255,255,255,.78)}
 .bg-dark .eyebrow{color:var(--pink)}
 
-.concept-shot{margin:28px 0;text-align:center}
-.concept-shot img{width:100%;height:auto;border-radius:14px;box-shadow:0 16px 44px rgba(0,0,0,.1);display:block}
+.concept-shot{margin:28px 0}
+.concept-shot img{width:100%;max-width:640px;aspect-ratio:16/9;object-fit:cover;border-radius:14px;box-shadow:0 16px 44px rgba(0,0,0,.1);display:block}
 
-.conclusion{text-align:center;font-size:16px;font-weight:900;margin:28px 0 8px}
-.footnote{text-align:center;font-size:12.5px;color:var(--gray)}
+.conclusion{font-size:16px;font-weight:900;margin:28px 0 8px}
+.footnote{font-size:12.5px;color:var(--gray)}
 
 /* MAIN INSIGHT */
-.stat-callout{text-align:center;margin:8px 0 28px}
+.stat-callout{margin:8px 0 28px}
 .stat-callout .num{font-size:clamp(48px,10vw,84px);font-weight:900;color:var(--pink);line-height:1}
 .stat-callout .label{font-size:15px;color:var(--gray);margin-top:10px;font-weight:700}
-.pivot-q{text-align:center;font-size:clamp(20px,3.4vw,26px);font-weight:900;margin:32px 0}
-.key-line{text-align:center;font-size:16px;font-weight:900;margin:8px 0}
+.pivot-q{font-size:clamp(20px,3.4vw,26px);font-weight:900;margin:32px 0}
+.key-line{font-size:16px;font-weight:900;margin:8px 0}
 
 /* REFRAME */
-.reframe-flow{display:flex;flex-direction:column;align-items:center;gap:6px;margin:28px 0}
-.reframe-box{width:100%;max-width:520px;text-align:center;border-radius:14px;padding:18px}
+.reframe-flow{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:28px 0}
+.reframe-box{width:100%;max-width:520px;border-radius:14px;padding:18px}
 .reframe-box.before{background:var(--bg);border:1px solid var(--line)}
 .reframe-box.after{background:var(--black);color:#fff}
 .reframe-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:6px}
@@ -73,19 +73,19 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .reframe-text{font-size:14.5px;font-weight:700}
 .reframe-arrow{color:#ccc;font-size:18px}
 
-.chain{display:flex;flex-direction:column;align-items:center;gap:6px;margin:28px 0}
-.chain-box{width:100%;max-width:480px;text-align:center;border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:13.5px;font-weight:700}
+.chain{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:28px 0}
+.chain-box{width:100%;max-width:480px;border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:13.5px;font-weight:700}
 .chain-arrow{color:#ccc;font-size:16px}
 
 /* CAMPAIGN CONCEPT */
-.derive-flow{display:flex;flex-direction:column;align-items:center;gap:6px;margin:24px 0 36px}
-.derive-step{width:100%;max-width:520px;text-align:center;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 16px;font-size:13px}
+.derive-flow{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:24px 0 36px}
+.derive-step{width:100%;max-width:520px;border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 16px;font-size:13px}
 .derive-step b{display:block;font-size:12px;color:var(--pink);margin-bottom:4px;font-weight:900}
 .derive-arrow{color:rgba(255,255,255,.3);font-size:16px}
-.campaign-copy{text-align:center;font-size:clamp(26px,5vw,42px);font-weight:900;margin:24px 0 32px}
+.campaign-copy{font-size:clamp(26px,5vw,42px);font-weight:900;margin:24px 0 32px}
 
 /* OUTPUT */
-.imc-flow-mini{text-align:center;font-size:13px;color:var(--gray);font-weight:700;margin-bottom:24px}
+.imc-flow-mini{font-size:13px;color:var(--gray);font-weight:700;margin-bottom:24px}
 .feature-tag{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--pink);text-transform:uppercase;margin-bottom:8px}
 .feature-title{font-size:19px;font-weight:900;margin-bottom:12px}
 .feature-flow{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:16px 0 20px;font-size:13px;font-weight:700}
@@ -93,9 +93,9 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .feature-flow .arrow{color:#ccc;font-weight:400}
 
 .imc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:32px 0 28px}
-.imc-shot img{width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+.imc-shot img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;display:block;box-shadow:0 10px 28px rgba(0,0,0,.08)}
 
-.award-badge{text-align:center;margin:8px 0 24px}
+.award-badge{margin:8px 0 24px}
 .award-badge .num{font-size:clamp(36px,7vw,52px);font-weight:900;color:var(--pink)}
 .award-badge .sub{font-size:13px;color:var(--gray);margin-top:6px}
 
@@ -166,7 +166,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec bg-dark">
   <div class="wrap">
     <p class="eyebrow">Main Insight</p>
-    <h2 class="h2" style="text-align:center">러닝의 장점을 몰라서 뛰지 않는 것이 아니었습니다.</h2>
+    <h2 class="h2">러닝의 장점을 몰라서 뛰지 않는 것이 아니었습니다.</h2>
     <div class="concept-shot">
       <img src="../../images/mizuno2/insight.jpg" alt="러닝을 하지 못하는 이유 설문 결과"/>
     </div>
@@ -218,7 +218,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec bg-dark">
   <div class="wrap">
     <p class="eyebrow">Campaign Concept</p>
-    <h2 class="h2" style="text-align:center">비울수록 날아오르니까</h2>
+    <h2 class="h2">비울수록 날아오르니까</h2>
     <div class="derive-flow">
       <div class="derive-step"><b>브랜드 문제</b>비마니아에게 미즈노가 멀게 느껴짐</div>
       <div class="derive-arrow">↓</div>

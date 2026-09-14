@@ -58,18 +58,21 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .branch-actions span{font-size:12.5px;color:#333;padding-left:14px;position:relative}
 .branch-actions span::before{content:'→';position:absolute;left:0;color:var(--pink)}
 
-/* SHOT */
-.result-shot{margin:32px 0;text-align:center}
-.result-shot img{max-width:280px;width:100%;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14)}
-.shot-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:28px 0}
-.shot-row .result-shot{margin:0}
+/* SHOT (phone screenshots share one native ratio — 1179x2556 — so they're pinned to
+   the same display width instead of stretching to fill their row) */
+.result-shot{margin:32px 0}
+.result-shot img{max-width:200px;width:100%;aspect-ratio:1179/2556;object-fit:cover;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.14)}
+.shot-row{display:flex;gap:20px;flex-wrap:wrap;margin:28px 0}
+.shot-row .result-shot{margin:0;flex:1;min-width:0}
+/* wide desktop/dashboard captures (quality-case testing screens) share a 16:10 crop */
+#quality .result-shot img{max-width:none;width:100%;aspect-ratio:16/10}
 
 /* GROWTH STAT */
-.growth-row{display:flex;align-items:baseline;justify-content:center;gap:20px;margin:36px 0;flex-wrap:wrap}
+.growth-row{display:flex;align-items:baseline;gap:20px;margin:36px 0;flex-wrap:wrap}
 .growth-num{font-size:clamp(36px,7vw,56px);font-weight:900;color:var(--black)}
 .growth-arrow{font-size:clamp(28px,5vw,40px);color:var(--pink);font-weight:900}
 .growth-pct{display:inline-block;margin-top:6px;font-size:14px;font-weight:700;color:var(--pink);background:var(--pink-light);border-radius:999px;padding:6px 16px}
-.growth-label{text-align:center;font-size:13px;color:var(--gray);margin-top:4px}
+.growth-label{font-size:13px;color:var(--gray);margin-top:4px}
 
 /* QUALITY TEST CONDITIONS */
 .cond-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:28px 0}
@@ -78,7 +81,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .todo{font-size:12px;color:#b58900;background:#fff8e6;border:1px dashed #e6cf8a;border-radius:8px;padding:10px 14px;margin:20px 0}
 
 /* OPERATION RESULT */
-.op-result{text-align:center;margin:36px 0}
+.op-result{margin:36px 0}
 .op-num{font-size:clamp(44px,8vw,68px);font-weight:900;color:var(--pink);line-height:1}
 .op-label{font-size:14px;color:var(--gray);margin-top:10px}
 
@@ -87,8 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .mini-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gray);text-transform:uppercase;margin-bottom:10px}
 .mini-title{font-size:clamp(19px,2.6vw,24px);font-weight:900;margin-bottom:16px}
 .mini-body{font-size:14px;color:#444;line-height:1.85;margin-bottom:24px}
-.mini-shot{text-align:center}
-.mini-shot img{max-width:420px;width:100%;border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.12)}
+.mini-shot img{max-width:420px;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.12)}
 
 footer{background:#080808;padding:28px 48px;text-align:center}
 .footer-copy{font-size:12px;color:#3a3a3a;letter-spacing:.06em}
@@ -101,6 +103,8 @@ footer{background:#080808;padding:28px 48px;text-align:center}
   .branch{grid-template-columns:1fr}
   .cond-grid{grid-template-columns:repeat(2,1fr)}
   .mini{padding:32px 24px}
+  #quality .shot-row{flex-wrap:nowrap}
+  #quality .shot-row .result-shot{min-width:90px}
 }
 </style>
 </head>
@@ -195,17 +199,17 @@ footer{background:#080808;padding:28px 48px;text-align:center}
     </div>
 
     <div class="growth-row">
-      <div style="text-align:center">
+      <div>
         <div class="growth-num">89</div>
         <div class="growth-label">이전 주간 전환</div>
       </div>
       <div class="growth-arrow">→</div>
-      <div style="text-align:center">
+      <div>
         <div class="growth-num">129</div>
         <div class="growth-label">개선 후 주간 전환</div>
       </div>
     </div>
-    <div style="text-align:center">
+    <div>
       <span class="growth-pct">약 +45%</span>
     </div>
 
@@ -235,7 +239,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
         <img src="../../images/snow1_operate/11.jpg" alt="다양한 인물 조건으로 진행한 대량 재현 테스트 관리 화면"/>
       </div>
       <div class="result-shot">
-        <img src="../../images/snow1_operate/12.jpg" alt="동물 이미지 조건 재현 테스트 결과"/>
+        <img src="../../images/snow1_operate/12.jpg" alt="동물 이미지 조건 재현 테스트 결과" style="object-position:center 20%"/>
       </div>
       <div class="result-shot">
         <img src="../../images/snow1_operate/13.jpg" alt="인물 조건별 재현 테스트 결과 비교"/>
@@ -260,7 +264,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec" id="op-result">
   <div class="wrap">
     <p class="eyebrow">Operation Result</p>
-    <h2 class="h2" style="text-align:center">전체 운영 성과</h2>
+    <h2 class="h2">전체 운영 성과</h2>
     <div class="op-result">
       <div class="op-num">+20%</div>
       <div class="op-label">관리 콘텐츠 평균 저장률 상승<br>(지표 분석·노출 조정·품질 검증·UX 개선이 누적된 결과)</div>

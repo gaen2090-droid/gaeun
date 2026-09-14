@@ -84,8 +84,9 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(255,
 .concept-final .line1{font-size:14px;color:var(--gray);margin-bottom:8px}
 .concept-final .line2{font-size:clamp(22px,4vw,32px);font-weight:900}
 .concept-final .line2 em{color:var(--pink);font-style:normal}
-.concept-shot{margin:32px 0 0;text-align:center}
-.concept-shot img{max-width:100%;border-radius:14px;box-shadow:0 16px 44px rgba(0,0,0,.1)}
+.concept-shot{margin:32px 0 0}
+.concept-shot img{width:100%;max-width:560px;aspect-ratio:16/9;object-fit:cover;border-radius:14px;box-shadow:0 16px 44px rgba(0,0,0,.1)}
+.concept-shot.wide img{aspect-ratio:2400/972}
 
 /* OUTPUT */
 .imc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:0 0 28px}
@@ -166,8 +167,8 @@ footer{background:#080808;padding:28px 48px;text-align:center}
 <section class="sec bg-dark">
   <div class="wrap">
     <p class="eyebrow">Main Insight</p>
-    <h2 class="h2" style="text-align:center">79.4%가 이미 '정착'했다는 결과에서 한 번 더 질문했습니다.</h2>
-    <p class="body" style="text-align:center">"2통 이상 꾸준히 사용하는 스킨케어 제품이 있나요?"</p>
+    <h2 class="h2">79.4%가 이미 '정착'했다는 결과에서 한 번 더 질문했습니다.</h2>
+    <p class="body">"2통 이상 꾸준히 사용하는 스킨케어 제품이 있나요?"</p>
     <div class="stat-callout">
       <div class="num">79.4%</div>
       <div class="label">YES</div>
@@ -182,7 +183,7 @@ footer{background:#080808;padding:28px 48px;text-align:center}
     </div>
     <p class="key-line">같은 '정착' 행동도 이유는 달랐습니다.</p>
     <p class="key-sub">일부 고객은 만족해서 계속 사용하고 있었지만, 일부는 <b>더 잘 맞는 제품을 찾지 못한 채</b><br>현재 제품에 머무르고 있었습니다.</p>
-    <div class="concept-shot">
+    <div class="concept-shot wide">
       <img src="../../images/cosrx2/insight-evidence.png" alt="꾸준히 쓰는 제품 유무와 정착 이유에 대한 실제 설문 응답"/>
     </div>
   </div>
